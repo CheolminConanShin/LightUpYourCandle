@@ -88,7 +88,6 @@ class App extends Component {
                 </p>
                 <button onClick={this.onAttendClick} disabled={this.state.buttonText === "참가" ? false : true}>{this.state.buttonText}</button>
                 <button onClick={this.onHackClick}>핵 클릭</button>
-                <div>현재까지 참가 인원: {this.state.attendanceCount}</div>
                 <div>위치: {this.state.latitude} : {this.state.longitude}</div>
             </div>
         );

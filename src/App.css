@@ -24,6 +24,11 @@
   font-family: bmdohyeon;
 }
 
+.App-intro > * {
+  display: inline;
+  vertical-align: middle;
+}
+
 .Lighted-candle, .Lighted-candle image {
   width: 13px;
   height: 54px;
