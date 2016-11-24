@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ultralisk.iml" filepath="$PROJECT_DIR$/.idea/ultralisk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ultralisk.iml" filepath="$PROJECT_DIR$/ultralisk.iml" />
     </modules>
   </component>
 </project>

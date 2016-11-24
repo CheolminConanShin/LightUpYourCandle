@@ -24,6 +24,11 @@
   font-family: bmdohyeon;
 }
 
+.Lighted-candle, .Lighted-candle image {
+  width: 13px;
+  height: 54px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

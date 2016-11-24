@@ -14,6 +14,15 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseReference = firebaseApp.database().ref();
 
+/** Reference : http://blog.naver.com/yellowcar7910/220869574933
+    고려 사이버 대학교 : 37.586647, 126.985551
+    경기 대학교 대학원 : 37.564360, 126.962012
+**/
+const topRightCorner_latitude = 37.586647;
+const topRightCorner_longitude = 126.985551;
+const leftBottom_latitude = 37.5643604;
+const leftBottom_longitude = 126.962012;
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -27,7 +36,7 @@ class App extends Component {
         }
 
         this.state = {
-            buttonText: attendance === undefined ? "참가" : "참가완료",
+            buttonText: attendance === undefined ? "로딩중" : "참가완료",
             attendanceCount: 0,
             geolocationAvailable: geolocationAvailable,
             latitude: "N/A",
@@ -53,6 +62,17 @@ class App extends Component {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
                 }));
+
+                if(this.state.latitude <= topRightCorner_latitude && this.state.latitude >= leftBottom_latitude &&
+                this.state.longitude <= topRightCorner_longitude && this.state.longitude >= leftBottom_longitude){
+                  this.setState(Object.assign({}, this.state, {
+                      buttonText: "참가"
+                  }));
+                } else {
+                  this.setState(Object.assign({}, this.state, {
+                      buttonText: "참가불가"
+                  }));
+                }
             });
         }
     }
@@ -61,7 +81,10 @@ class App extends Component {
         return (
             <div className="App">
                 <p className="App-intro">
-                    경찰 추산은 정말 옳은가...
+                  <svg className="Lighted-candle">
+                    <image xlinkHref="/images/candle.svg"/>
+                  </svg>
+                  <div>{this.state.attendanceCount}명</div>
                 </p>
                 <button onClick={this.onAttendClick} disabled={this.state.buttonText === "참가" ? false : true}>{this.state.buttonText}</button>
                 <button onClick={this.onHackClick}>핵 클릭</button>
