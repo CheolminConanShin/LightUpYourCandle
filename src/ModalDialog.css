@@ -1,0 +1,33 @@
+.popupTitle {
+  text-align: center;
+  font-family: bmyeonsung;
+  font-size: 26px;
+  margin-top: 49px;
+  margin-bottom: 30px;
+}
+
+.mapImage {
+  width: 100%;
+  margin: auto;
+}
+
+.mapImage > image {
+  display: table-cell;
+}
+
+.cancelButton {
+  display: table;
+  width: 300px;
+  height: 49.7px;
+  font-family: bmhanna;
+  font-size: 20px;
+  border: 1px solid #979797;
+  margin: auto;
+  margin-top: 9px;
+  text-align: center;
+}
+
+.cancelButton > span {
+  display: table-cell;
+  vertical-align: middle;
+}

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://sunhoy.github.io/ultralisk",
   "devDependencies": {
+    "react-modal": "^1.5.2",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
