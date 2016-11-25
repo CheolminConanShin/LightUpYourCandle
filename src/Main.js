@@ -123,6 +123,9 @@ class Main extends Component {
     }
 
     onAttendClick() {
+      let currTime = new Date().getTime();
+      let 
+
       let newKey = firebaseReference.push().key;
       cookie.save("attendance", newKey);
 
