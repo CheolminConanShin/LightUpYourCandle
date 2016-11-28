@@ -18,15 +18,15 @@ const firebaseReference = firebaseApp.database().ref();
 고려 사이버 대학교 : 37.586647, 126.985551
 경기 대학교 대학원 : 37.564360, 126.962012
 **/
-const topRightCorner_latitude = 37.586647;
-const topRightCorner_longitude = 126.985551;
-const leftBottom_latitude = 37.5643604;
-const leftBottom_longitude = 126.962012;
+// const topRightCorner_latitude = 37.586647;
+// const topRightCorner_longitude = 126.985551;
+// const leftBottom_latitude = 37.5643604;
+// const leftBottom_longitude = 126.962012;
 
-// const topRightCorner_latitude = 37.469047;
-// const topRightCorner_longitude = 127.024321;
-// const leftBottom_latitude = 37.462720;
-// const leftBottom_longitude = 127.022840;
+const topRightCorner_latitude = 37.469047;
+const topRightCorner_longitude = 127.024321;
+const leftBottom_latitude = 37.462720;
+const leftBottom_longitude = 127.022840;
 
 class Main extends Component {
   constructor(props) {
@@ -123,9 +123,6 @@ class Main extends Component {
     }
 
     onAttendClick() {
-      let currTime = new Date().getTime();
-      let 
-
       let newKey = firebaseReference.push().key;
       cookie.save("attendance", newKey);
 
