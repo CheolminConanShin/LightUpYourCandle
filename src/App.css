@@ -1,6 +1,6 @@
 @font-face {
   font-family: bmhanna;
-  src: url(fonts/BMHANNA.ttf);
+  src: url(./fonts/BMHANNA.ttf);
 }
 
 @keyframes App-logo-spin {
