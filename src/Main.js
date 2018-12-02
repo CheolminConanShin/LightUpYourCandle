@@ -89,7 +89,7 @@ class Main extends Component {
         <p>현재까지 켜진 촛불 수</p>
         <p className="attendanceCountField">
         <svg className="Lighted-candle">
-        <image xlinkHref="/images/candle.svg"/>
+        <image src="https://raw.githubusercontent.com/CheolminConanShin/LightUpYourCandle/master/public/images/candle.svg"/>
         </svg>
         <span>{this.state.attendanceCount}명</span>
         </p>

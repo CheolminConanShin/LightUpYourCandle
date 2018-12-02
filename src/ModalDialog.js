@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 var ReactDOM = require('react-dom');
 var Modal = require('react-modal');
-var MapImage = require('./images/map.png');
 import './ModalDialog.css';
 
 const customStyles = {
@@ -48,7 +47,7 @@ class GuidePopup extends Component {
               <p>집회 장소로 이동하여</p>
               <p>촛불을 켜주세요</p>
             </div>
-            <img className="mapImage" src={MapImage} />
+            <img className="mapImage" src="https://github.com/CheolminConanShin/LightUpYourCandle/blob/master/src/images/map.png?raw=true" />
             <div className="cancelButton" >
               <span onClick={this.closeModal}>닫기</span>
             </div>
